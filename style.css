@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+:root {
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+
+.container {
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    ;
+
+}
+
+h1{
+    color:var(--pl-white);
+    /* opacity: 0.75;
+     */
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     text-align: center;
+     line-height: 1.2;
+     
+
+}
+.display-container{
+    position: relative;
+    /* background-color: #8BC6EC; */
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border-radius: 1rem;
+    border-bottom:.35rem solid rgb(81, 135, 152);
+    margin:1rem 0;
+    padding-top:0.35rem;
+    display: flex;
+    
+
+
+
+}
+.display{
+    width:100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color:black;
+    font-weight: bold;
+    border:none;
+}
+.btn-1{
+    background: transparent;
+    border:none;
+    position: relative;
+    left:-10px;
+
+}
+
+.display::placeholder{
+    position: absolute;
+    color:black;
+    font-weight: bold;
+}
+
+.scalewala{
+    position:absolute;
+    background-color:rgba(133, 82, 243, 0.696);
+    top:-16px;
+    left:-5px;
+    /* opacity:1; */
+    scale:0;
+    width:50px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.active{
+    scale:1;
+    transition: scale 0.3s;
+}
+
+
+
+.input-container{
+   
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    width:300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-top:20px;
+    
+    border-radius:5px;
+
+
+}
+
+.length-container{
+    padding-left:10px;
+    width: 90%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    
+}
+
+.length-container p:nth-child(1){
+    /* color:yellow; */
+    /* only for learning that password length can be access by this also */
+}
+
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    padding-left:10px;
+    width: 90%;
+    margin-top:1rem;
+
+}
+.strength-container p:nth-child(1){
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(198, 191, 191);
+    box-shadow: 0px 0px 12px  1px black;
+    /* z-index:1; */
+    border-radius: 50%;
+}
+
+.generateButton{
+    width:250px;
+    height: 35px;
+    margin-top:15px;
+    margin-left :20px;
+    border-radius: 5px;
+    color:black;
+    font-weight: bold;
+    background-color: rgba(133, 82, 243, 0.696);
+
+
+}
+
+.check{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+    margin-top:7px;
+    margin-left: 5px;
+    justify-content: space-evenly;
+    
+}
+
+
+
+.check input{
+    appearance: none;
+    width:20px;
+    height: 20px;
+    border:1px solid cyan;
+    cursor:pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+    background-color: cyan;
+
+}
+
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: var(--dk-text);
+    font-size:1.05rem;
+    font-weight: 600;
+    left:50%;
+    top:-3.5px;
+    transform: translateX(-50%)  translateY(5%);
+}
+
+.check label{
+    font-size:1rem;
+}
+
+.slider{
+    appearance: none;
+    width:90%;
+    height: 0.75rem;
+    margin-left:10px;
+    margin-top:7px;
+    cursor:pointer;
+    border-radius: 1rem;
+    background-color: rgba(14, 3, 38, 0.696);
+    background-repeat: no-repeat;
+    
+    background-image: linear-gradient(rgba(139, 147, 231, 0.696),rgba(76, 0, 255, 0.696));
+    
+}
+
+/* webkit slider thumb is an pseudo selector */
+.slider::-webkit-slider-thumb{ 
+    position: relative;
+    appearance: none;
+    height:1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    background-color: rgb(83, 255, 89);
+    cursor:pointer;
+    margin-top:-1px;
+    box-shadow: 0px 0px 10px 2px rgb(76, 233, 81);
+    transition: all 100ms ease-in;
+ 
+}
+
+.slider:focus{
+    outline: 3px solid rgb(76, 233, 81);
+
+}
+
+.slider::-webkit-slider-thumb:hover{
+    /* outline: 2px solid var(--vb-yellow); */
+    background-color: rgb(33, 139, 37);;
+    /* box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80); */
+}
+
+
+/* moz will also run in firefox also as webkit is not supportive on firefox */
+
+/* .slider::-moz-range-thumb {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--vb-yellow);
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb:hover {
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+  } */
+
+
+  .indi{
+    position:absolute;
+    background-color:rgba(133, 82, 243, 0.696);
+    top:-28px;
+    left:220px;
+    /* opacity:1; */
+    scale:0;
+    width:80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.active{
+    scale:1;
+    transition: scale 0.3s;
+}
